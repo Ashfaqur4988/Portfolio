@@ -14,10 +14,26 @@ const Footer = () => {
         <div className="right">
           <h1>SOCIAL</h1>
           <div className="social-icons">
-            <FaGithub size={25} />
-            <FaLinkedin size={25} />
-            <FaTwitter size={25} />
-            <FaInstagram size={25} />
+            <a
+              href="https://github.com/Ashfaqur4988"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={25} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ashfaqur-riaz-570bb5168/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={25} />
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <FaTwitter size={25} />
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={25} />
+            </a>
           </div>
         </div>
       </div>

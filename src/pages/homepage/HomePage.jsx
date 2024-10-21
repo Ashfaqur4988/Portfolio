@@ -2,7 +2,7 @@ import "./homePage.scss";
 
 const HomePage = () => {
   return (
-    <div className="homepage">
+    <div className="homepage" id="home">
       <div className="content">
         <img src="nobg.png" alt="picture" />
         <div className="info">

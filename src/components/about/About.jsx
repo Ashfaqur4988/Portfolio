@@ -26,7 +26,7 @@ const skills = [
 ];
 const About = () => {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="top">
         <h1>ABOUT ME</h1>
 

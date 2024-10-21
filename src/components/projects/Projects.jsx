@@ -39,7 +39,7 @@ const projects = [
 ];
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="top">
         <h1>PROJECTS</h1>
         <p>
