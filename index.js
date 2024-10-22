@@ -21,11 +21,13 @@ app.use(express.json());
 
 app.use("/api", saveMessageRouter);
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
+if (process.env.NODE_ENV !== "development") {
+  app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+  });
+}
 
 app.listen(port, () => {
   console.log("Server started on port ", port);
