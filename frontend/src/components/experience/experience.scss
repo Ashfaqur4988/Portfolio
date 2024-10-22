@@ -1,4 +1,4 @@
-@import "../../responsive.scss";
+@use "../../responsive.scss" as *;
 
 .experience {
   padding-top: 100px;

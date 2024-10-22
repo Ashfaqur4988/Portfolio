@@ -1,4 +1,5 @@
-@import "../../responsive.scss";
+@use "../../responsive.scss" as *;
+
 .contact {
   width: 100%;
   height: 100%;

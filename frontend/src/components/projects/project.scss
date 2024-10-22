@@ -1,4 +1,5 @@
-@import "../../responsive.scss";
+@use "../../responsive.scss" as *;
+
 .projects {
   padding-top: 100px;
   padding-bottom: 20px;
