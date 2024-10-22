@@ -122,6 +122,10 @@
               font-size: 15px;
             }
           }
+          p:hover {
+            scale: 1.1;
+            transition: all 0.3s ease;
+          }
         }
         .desc {
           font-size: 20px;
