@@ -22,6 +22,10 @@
         "src": "/(.*)",
         "dest": "/frontend/dist/$1"
       }
-    ]
+    ],
+    "scripts": {
+      "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+      "start": "node index.js"
+    }
   }
   
