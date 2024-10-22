@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .experience {
   padding-top: 100px;
   width: 100%;
@@ -6,14 +8,27 @@
   flex-direction: column;
   gap: 20px;
   padding-bottom: 20px;
+
+  @include sm {
+    height: 100%;
+  }
+
   h1 {
     font-size: 40px;
     color: #212121;
+
+    @include sm {
+      font-size: 30px;
+    }
   }
   p {
     font-size: 20px;
     text-align: center;
     color: #505050;
+
+    @include sm {
+      font-size: 15px;
+    }
   }
 
   .top {
@@ -33,22 +48,39 @@
     justify-content: space-between;
     gap: 10px;
 
+    @include sm {
+      flex-direction: column;
+    }
+
     .left {
       width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      text-align: center;
+      gap: 10px;
+
+      @include sm {
+        width: 100%;
+      }
 
       h3 {
         font-size: 25px;
         border-radius: 5px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+        @include sm {
+          font-size: 20px;
+        }
       }
 
       h4 {
         font-size: 20px;
+
+        @include sm {
+          font-size: 15px;
+        }
       }
     }
 
@@ -56,17 +88,33 @@
       width: 50%;
       padding-right: 40px;
 
+      @include sm {
+        width: 100%;
+        padding: 0 15px;
+      }
+
       ul {
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: flex-start;
         gap: 20px;
+
+        @include sm {
+          gap: 10px;
+          padding: 0 10px;
+          text-align: justify;
+        }
       }
 
       li {
         font-size: 20px;
         line-height: 30px;
+
+        @include sm {
+          font-size: 15px;
+          line-height: 20px;
+        }
       }
     }
   }

@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .navbar {
   width: 100%;
   height: 80px;
@@ -9,7 +11,7 @@
   padding: 10px 40px;
   color: #f5f5f5;
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 999;
 
   a {
@@ -32,6 +34,13 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @include sm {
+      span {
+        display: none;
+      }
     }
   }
 
@@ -41,5 +50,47 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .menuIcon {
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+
+    @include sm {
+      display: inline;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1e1e2f;
+    width: 40%;
+    height: 100vh;
+    transition: all 1s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+
+    .aMenu {
+      font-size: 20px;
+    }
+
+    &.active {
+      right: -50%;
+    }
+  }
+
+  @include sm {
+    width: 100vw;
   }
 }

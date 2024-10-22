@@ -23,6 +23,7 @@ const skills = [
   "Postman",
   "Jira",
   "Confluence",
+  "Swagger",
 ];
 const About = () => {
   return (

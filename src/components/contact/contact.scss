@@ -1,3 +1,4 @@
+@import "../../responsive.scss";
 .contact {
   width: 100%;
   height: 100%;
@@ -12,11 +13,19 @@
   h1 {
     font-size: 40px;
     color: #212121;
+
+    @include sm {
+      font-size: 30px;
+    }
   }
   p {
     font-size: 20px;
     text-align: center;
     color: #505050;
+
+    @include sm {
+      font-size: 15px;
+    }
   }
 
   .top {
@@ -25,6 +34,11 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    @include sm {
+      text-align: center;
+      gap: 10px;
+    }
   }
 
   .bottom {
@@ -33,6 +47,11 @@
     align-items: center;
     justify-content: center;
     width: 60%;
+
+    @include sm {
+      width: 100%;
+      padding: 0 20px;
+    }
 
     .form {
       width: 100%;
@@ -45,10 +64,18 @@
       background-color: white;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 
+      @include sm {
+        padding: 20px;
+      }
+
       label {
         font-size: 20px;
         color: #212121;
         font-weight: bold;
+
+        @include sm {
+          font-size: 15px;
+        }
       }
 
       input {
@@ -56,17 +83,31 @@
         border-radius: 5px;
         outline: none;
         border: 1px solid #ccc;
-        font-size: 20px;
+        font-size: 15px;
+        padding: 0 10px;
         background-color: rgb(233, 233, 233);
+
+        @include sm {
+          height: 30px;
+          font-size: 10px;
+          padding: 0 5px;
+        }
       }
 
       textarea {
         height: 150px;
         border-radius: 5px;
         outline: none;
-        font-size: 20px;
+        font-size: 15px;
+        padding: 10px;
         border: 1px solid #ccc;
         background-color: rgb(233, 233, 233);
+
+        @include sm {
+          height: 100px;
+          font-size: 10px;
+          padding: 5px;
+        }
       }
 
       button {
@@ -82,6 +123,12 @@
         font-weight: bold;
         font-family: "Times New Roman", Times, serif;
         cursor: pointer;
+
+        @include sm {
+          width: 100%;
+          font-size: 15px;
+          padding: 0 5px;
+        }
       }
 
       button:hover {

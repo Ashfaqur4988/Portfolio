@@ -17,8 +17,8 @@ const Experience = () => {
         <div className="right">
           <ul>
             <li>
-              Developed frontend features for an insurance web application using
-              React.js
+              Developed frontend features for an insurance company client web
+              application using React.js
             </li>
             <li>
               Developed frontend pages using JSP for a legacy application.
