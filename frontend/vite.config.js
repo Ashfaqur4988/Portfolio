@@ -7,4 +7,5 @@ export default defineConfig({
   build: {
     outDir: "dist", // Set the output directory to 'dist'
   },
+  // base: "./", // Ensure assets are linked relatively
 });

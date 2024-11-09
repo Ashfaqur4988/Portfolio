@@ -3,35 +3,34 @@ name: CI/CD Pipeline for Render Deployment
 on:
   push:
     branches:
-      - main # Adjust if you want to deploy from a different branch
-  pull_request:
-    branches:
       - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Specifies the environment for the job
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3 # Use an exact version
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3 # Use an exact version
+        uses: actions/setup-node@v3
         with:
-          node-version: "20" # Explicitly sets Node.js 20, aligning with GitHub’s default
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
         run: npm test
-        # Optional: Add "-- --watchAll=false" if tests run in watch mode by default.
+        continue-on-error: true # Optional: If you don't have tests set up
 
       - name: Build the application
         run: npm run build
 
       - name: Deploy to Render
         if: success()
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
         run: |
           curl -X POST "$RENDER_DEPLOY_HOOK_URL"

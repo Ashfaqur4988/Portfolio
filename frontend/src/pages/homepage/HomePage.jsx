@@ -11,7 +11,7 @@ const HomePage = () => {
             I am a Full Stack Developer transitioning to a Full Stack
             Generalist!
           </p>
-          <button>Projects</button>
+          <a href="#projects">Projects</a>
         </div>
       </div>
     </div>
