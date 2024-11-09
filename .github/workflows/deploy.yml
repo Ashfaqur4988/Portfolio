@@ -15,29 +15,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        # This action checks out the code in your repository so GitHub Actions can access it.
+        # Will automatically use Node.js 20 as per GitHub's update.
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20" # Adjust if your project uses a different Node.js version
-        # Sets up Node.js for the build process, necessary for a Node.js application.
+          node-version: "20" # Explicitly sets Node.js 20, aligning with GitHub’s defaults
 
       - name: Install dependencies
         run: npm install
-        # Installs all dependencies listed in package.json to prepare for testing/building.
 
       - name: Run tests
         run: npm test
-        # Runs tests to ensure your code is working properly before deploying.
-        # Optional: Add "-- --watchAll=false" if tests get stuck in watch mode.
+        # Optional: Add "-- --watchAll=false" if tests run in watch mode by default.
 
       - name: Build the application
         run: npm run build
-        # Builds your application, creating the necessary files for deployment.
 
       - name: Deploy to Render
         if: success()
         run: |
           curl -X POST "$RENDER_DEPLOY_HOOK_URL"
-        # Triggers the Render deployment by making an HTTP POST request to the Deploy Hook URL.
