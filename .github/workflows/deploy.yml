@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@latest # Using latest version
+        uses: actions/checkout@v3 # Use an exact version
 
       - name: Set up Node.js
-        uses: actions/setup-node@latest # Using latest version
+        uses: actions/setup-node@v3 # Use an exact version
         with:
-          node-version: "20" # Explicitly sets Node.js 20
+          node-version: "20" # Explicitly sets Node.js 20, aligning with GitHub’s default
 
       - name: Install dependencies
         run: npm install
